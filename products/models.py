@@ -22,3 +22,7 @@ class Product(models.Model):
     publish_date = models.DateTimeField(
         blank = True, null = True)
     
+    
+    def __str__(self):
+        
+        return f'{self.name} - {self.brand} | ${self.price}'
